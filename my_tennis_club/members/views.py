@@ -11,3 +11,12 @@ def members(request):
     }
 
     return HttpResponse(template.render(context, request))
+
+def details(request, id):
+    myMember = Member.objects.get(id=id) # left side is part of get function. Can also work with pk (primary key). Right side ID is from our defined parameter.
+    template = loader.get_template('details.html')
+    context = {
+        'myMember' : myMember,
+    }
+
+    return HttpResponse(template.render(context, request))
