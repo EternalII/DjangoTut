@@ -8,6 +8,7 @@ def members(request):
     context = {
         'myMembers' : myMembers, #'myMembers' is the name used in the template where as myMembers is the variable defined here  
                                  # key : value, thus: key is 'myMembers' and value would be 'Emil' and etc
+                                 # 'myMembers' in HTML gets replaced with MyMembers object.
     }
 
     return HttpResponse(template.render(context, request))
@@ -19,4 +20,15 @@ def details(request, id):
         'myMember' : myMember,
     }
 
+    return HttpResponse(template.render(context, request))
+
+def main(request):
+    template = loader.get_template('main.html')
+    return HttpResponse(template.render())
+
+def testing(request):
+    template = loader.get_template('template.html')
+    context = {
+        'fruits' : ['Apple', 'Banana', 'Cherry'],
+    }
     return HttpResponse(template.render(context, request))

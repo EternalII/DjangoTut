@@ -5,15 +5,22 @@ scripts disabled? run in Powershell:
 Set-ExecutionPolicy Unrestricted -Scope Process
 ```
 
-Git reminders:
-```
-https://codefinity.com/blog/Essential-Git-Commands?utm_source=google&utm_medium=cpc&utm_campaign=21413601262&utm_content=&utm_term=&dki=&gad_source=1&gad_campaignid=21409590893&gbraid=0AAAAABTeUgQNF2fBQPDinlSqVSr3wVO2a&gclid=CjwKCAiAwqHIBhAEEiwAx9cTeUiCQqRw_sbWgZLPSsqILWHv-8Yo_ZOJP2R6YGCNuNF5vV5TNHZfRxoCFlQQAvD_BwE
-```
-
 virtual environment:
 ```
 venv\Scripts\activate.bat
 ```
+
+
+Git reminders:
+```
+https://codefinity.com/blog/Essential-Git-Commands?utm_source=google&utm_medium=cpc&utm_campaign=21413601262&utm_content=&utm_term=&dki=&gad_source=1&gad_campaignid=21409590893&gbraid=0AAAAABTeUgQNF2fBQPDinlSqVSr3wVO2a&gclid=CjwKCAiAwqHIBhAEEiwAx9cTeUiCQqRw_sbWgZLPSsqILWHv-8Yo_ZOJP2R6YGCNuNF5vV5TNHZfRxoCFlQQAvD_BwE
+
+Workflow:
+git add .
+git commit -m "Initial commit"
+git push
+```
+
 
 ## First project: 
 https://www.w3schools.com/django/django_create_project.php
@@ -22,3 +29,9 @@ django-admin startproject my_tennis_club
 python manage.py runserver
 python manage.py startapp members
 ```
+
+Important: When DEBUG = False, Django requires you to specify the hosts you will allow this Django project to run from.
+
+In production, in the settings.py file, this should be replaced with a proper domain name:
+
+ALLOWED_HOSTS = ['yourdomain.com']
